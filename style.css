@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1em;
+    font-size: 1em;
+    color: #000;
+}
+
+.font_mensage {
+    font-family: "Alex Brush", cursive;
+}
+
+.font_numbers {
+    font-family: "Lato", sans-serif;
+}
+
+:root {
+    /* Cores */
+    --white: rgb(255, 255, 255);
+    --opaqueWhite: rgba(255, 255, 255, 0.5);
+    --opaqueWhitePlus: rgba(255, 255, 255, 0.25);
+    --opaqueWhiteMinus: rgba(255, 255, 255, 0.75);
+    --black: rgb(0, 0, 0);
+    --opaqueBlack: rgba(0, 0, 0, 1);
+    --opaqueBlackPlus: rgba(0, 0, 0, 0.25);
+    --opaqueBlackMedio: rgba(0, 0, 0, 0.5);
+    --opaqueBlackMinus: rgba(0, 0, 0, 0.75);
+    --green: rgb(15, 95, 62);
+    --golden: rgb(210, 175, 110);
+    --goldenPlus: rgb(187, 146, 69);
+    --guavaPaste: rgb(145, 50, 50);
+    --milkCream: rgb(175, 110, 60);
+    --orange: rgb(230, 120, 5);
+    --orangeClear: rgb(235, 185, 55);
+    --lemon: rgb(75, 140, 65);
+    --lemonClear: rgb(180, 205, 135);
+    --bananaYellow: rgb(250, 200, 45);
+    --brown: rgb(175, 75, 55);
+    --yellow: rgb(255, 240, 20);
+    --yellowPassionFruit: rgb(250, 180, 60);
+    /* Fonte */
+    --font-small: .875em;
+    --font-normal: 1em;
+    --font-great: 1.25em;
+    --font-extra-great: 1.5em;
+    --font-title: 2em;
+    --font-bold: bold;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.container {
+    width: 100%;
+}
+
+.content {
+    width: 90%;
+    margin: 0 5%;
+    padding: 40px 0;
+    /* background: red; */
+}
+
+.title_front,
+.title_back {
+    width: 150px;
+    margin: 0 auto;
+    border-radius: 100px;
+    padding: 10px 25px;
+    border: 2px solid var(--white);
+    box-shadow: 0px 8px 10px var(--opaqueBlackMedio);
+}
+
+.title_front h1,
+.title_back h1 {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    color: var(--white);
+}
+
+.title_front {
+    background: var(--green);
+}
+
+.title_back {
+    background: var(--lemon);
+}
+
+.box_controller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+}
+
+
+/* Estilos para a Frente do cartão  */
+
+.container_card_front {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-image: url('./img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom -100px;
+    width: 600px;
+    height: 339px;
+    box-shadow: 0px 20px 15px -15px var(--opaqueBlackMinus);
+}
+
+.lens {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--opaqueWhitePlus)
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.box-large {
+    flex-basis: 50%;
+    height: 339px;
+}
+
+.logo {
+    position: relative;
+}
+
+.logo::before {
+    content: '';
+    width: 50%;
+    height: 30px;
+    background: var(--opaqueBlackMinus);
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    transform-origin: right;
+    transform: skewY(-5deg);
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.logo::after {
+    content: '';
+    width: 50%;
+    height: 30px;
+    background: var(--opaqueBlackMinus);
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    transform-origin: left;
+    transform: skewY(5deg);
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.left-topo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50%;
+    width: 100%;
+}
+
+.left-topo img {
+    width: 240px;
+}
+
+.left-base {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 50%;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.sabores {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+
+.guava_paste,
+.milk_cream {
+    position: relative;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 50px;
+    color: var(--white);
+    font-size: var(--font-small);
+    font-weight: var(--font-bold);
+}
+
+.guava_paste {
+    margin-right: 5px;
+    background: var(--guavaPaste);
+}
+
+.milk_cream {
+    margin-left: 5px;
+    background: var(--milkCream);
+}
+
+.mark {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    background: var(--white);
+}
+
+.right-topo,
+.right-base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.fruit_orange,
+.fruit_lemon,
+.fruit_passion_fruit,
+.fruit_banana {
+    position: relative;
+    flex-basis: 50%;
+    height: 85%;
+}
+
+.fruit_orange img,
+.fruit_lemon img {
+    position: absolute;
+    top: -13px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fruit_passion_fruit img,
+.fruit_banana img {
+    position: absolute;
+    bottom: -13px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name_fruit_topo {
+    position: absolute;
+    padding: 4px 10px;
+    width: 90%;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: var(--white);
+    font-weight: var(--font-bold);
+    text-align: center;
+    border-radius: 100px;
+    z-index: 2;
+    font-size: .75em;
+}
+
+.name_fruit_bottom {
+    position: absolute;
+    padding: 4px 10px;
+    width: 90%;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    background: var(--orange);
+    color: var(--white);
+    font-weight: var(--font-bold);
+    text-align: center;
+    border-radius: 100px;
+    z-index: 1;
+    font-size: .75em;
+}
+
+.line_fruit_top {
+    position: absolute;
+    width: 96%;
+    height: 96%;
+    background: transparent;
+    z-index: 1;
+    margin: 2%;
+    top: -13px;
+}
+
+.line_fruit_bottom {
+    position: absolute;
+    width: 96%;
+    height: 96%;
+    background: transparent;
+    z-index: 1;
+    margin: 2%;
+    bottom: -13px;
+}
+
+.box_orange {
+    border: 2px solid var(--orange);
+}
+
+.box_lemon {
+    border: 2px solid var(--lemon);
+}
+
+.box_passion_fruit {
+    border: 2px solid var(--yellowPassionFruit);
+}
+
+.box_banana {
+    border: 2px solid var(--bananaYellow);
+}
+
+.orange {
+    border: 2px solid var(--orangeClear);
+    background: var(--orange);
+}
+
+.lemon {
+    border: 2px solid var(--lemonClear);
+    background: var(--lemon);
+}
+
+.passion_fruit {
+    border: 2px solid var(--yellow);
+    background: var(--yellowPassionFruit);
+}
+
+.banana {
+    border: 2px solid var(--brown);
+    background: var(--bananaYellow);
+}
+
+.name_orange,
+.name_lemon,
+.name_passion_fruit,
+.name_banana {
+    color: var(--white);
+}
+
+.name_banana {
+    color: var(--brown);
+}
+
+.mark_fruit {
+    position: absolute;
+    right: 6px;
+    bottom: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    background: var(--white);
+}
+
+
+/* Estilos para o Verso do cartão  */
+
+.container_card_back {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: 339px;
+    margin-bottom: 100px;
+    border: 1px solid #e9e9e9;
+}
+
+.box_back_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    flex-basis: 60%;
+    border-right: 1px dashed #ccc;
+}
+
+.box_back_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    flex-basis: 40%;
+}
+
+.box_back_left .logo {
+    position: relative;
+    width: 240px;
+}
+
+.box_back_left .logo img {
+    width: 240px;
+}
+
+.call_to_action {
+    margin: 15px 0 0 0;
+    text-align: center;
+    padding: 10px;
+    color: var(--green);
+    font-weight: var(--font-bold);
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol_phone {
+    width: 32px;
+    height: 32px;
+    background-image: url("./img/icon-whatsapp.png");
+    background-position: center center;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+.numbers_phone {
+    font-weight: var(--font-bold);
+    color: var(--goldenPlus);
+    line-height: 1.25em;
+    font-size: var(--font-great);
+}
+
+.phrase p {
+    font-size: var(--font-title);
+    font-weight: 500;
+    color: var(--green);
+    margin-top: 15px;
+}
+
+.qr_code_insta {
+    width: 220px;
+    height: 253px;
+    background-image: url("./img/qr-code-insta.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face p {
+    margin-top: 1px;
+}
+
+.icon_face {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    line-height: 19px;
+    background-image: url("./img/icon-face.png");
+    background-position: center center;
+    background-size: cover;
+}
